@@ -19,3 +19,10 @@ sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 sudo yum -y install terraform
 
+
+sudo yum update -y
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/latest/2023-08-21/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin
+kubectl version --client
+
